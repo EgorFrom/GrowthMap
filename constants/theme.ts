@@ -16,6 +16,17 @@ export const Colors = {
     icon: '#687076',
     tabIconDefault: '#687076',
     tabIconSelected: tintColorLight,
+    // Цвета для карточек модулей
+    cardBackground: '#FFFFFF',
+    cardBorder: '#E0E0E0',
+    cardActiveBackground: '#E3F2FD',
+    cardLockedBackground: '#F5F5F5',
+    // Цвета для статусов
+    success: '#4CAF50', // для done статуса
+    disabled: '#999999', // для locked статуса
+    disabledDark: '#666666',
+    // Тени
+    shadow: '#000',
   },
   dark: {
     text: '#ECEDEE',
@@ -24,6 +35,17 @@ export const Colors = {
     icon: '#9BA1A6',
     tabIconDefault: '#9BA1A6',
     tabIconSelected: tintColorDark,
+    // Цвета для карточек модулей
+    cardBackground: '#1E1E1E',
+    cardBorder: '#333333',
+    cardActiveBackground: '#2A4A5C',
+    cardLockedBackground: '#151515',
+    // Цвета для статусов
+    success: '#4CAF50', // для done статуса
+    disabled: '#666666', // для locked статуса
+    disabledDark: '#666666',
+    // Тени
+    shadow: '#000',
   },
 };
 
