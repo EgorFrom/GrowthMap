@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
+Тестовое задание React Native (Evolution Lab)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Задача: Компонент «Growth Map» (Карта развития)
 
-## Get started
+Нам нужно реализовать экран со списком модулей обучения. Это вертикальный список, где уроки открываются последовательно.
+Вводные данные (захардкодь этот JSON в коде):
 
-1. Install dependencies
+JSON
 
-   ```bash
-   npm install
-   ```
 
-2. Start the app
+[
+  { "id": 1, "title": "Welcome Journey", "status": "done" },
+  { "id": 2, "title": "Переключение на себя", "status": "active" },
+  { "id": 3, "title": "Источник вдохновения", "status": "locked" },
+  { "id": 4, "title": "Пространство идей", "status": "locked" },
+  { "id": 5, "title": "Финальный тест", "status": "locked" }
+]
 
-   ```bash
-   npx expo start
-   ```
 
-In the output, you'll find options to open the app in a
+Часть 1. Код (React Native + Expo)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Сверстай этот список. Дизайн на твое усмотрение (можно использовать любые библиотеки UI или иконки), главное - аккуратность и UX.
+Состояния:
+done: Визуально отмечен как пройденный (галочка/цвет).
+active: Яркий, призывает нажать (кнопка Play или выделение).
+locked: Визуально недоступен (замок/серый цвет).
+Логика:
+Клик по active -> console.log('Start lesson').
+Клик по locked -> Показать пользователю уведомление, что урок закрыт.
+Инструменты:
+Мы поддерживаем использование AI (Cursor, Copilot и т.д.). Нам важен результат и чистота итогового кода.
+TypeScript обязателен.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Ответ: 
+- [экран](./app/(tabs)/index.tsx)
+- [компонент карточки](./components/module-card/index.ts)
 
-## Get a fresh project
+Часть 2. Архитектура (Текстовый ответ)
 
-When you're ready, run:
+Представь, что мы переносим это на реальный бэкенд (Supabase/Postgres).
+Напиши кратко (можно в комментариях к коду или отдельным файлом), как бы ты спроектировал таблицу(ы) в базе данных для хранения прогресса пользователя.
+Какие таблицы нужны?
+Как связать пользователя и статус урока?
+Как эффективно отдавать на фронтенд список, где сразу понятно, что открыто, а что закрыто?
+Формат сдачи (Важно!): Так как мы ценим свое и твое время, нам не нужно, чтобы ты собирал APK-файл.
+Код: Ссылка на репозиторий GitHub.
+Демонстрация (Обязательно выбери один вариант):
+Вариант А (Лучший): Ссылка на Expo Snack с твоим кодом. Это позволит нам запустить твой компонент прямо на нашем телефоне через QR-код.
+Вариант Б: Короткая видео-запись экрана (скринкаст), где ты прощелкиваешь все состояния кнопок (Active/Locked) и скроллишь список.
 
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Ответ: [database-design.md](./database-design.md)
