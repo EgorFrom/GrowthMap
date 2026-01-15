@@ -34,6 +34,7 @@ TypeScript обязателен.
 Ответ: 
 - [экран](./app/(tabs)/index.tsx)
 - [компонент карточки](./components/module-card/index.ts)
+- [Expo](https://snack.expo.dev/@egorfrom/growthmapexpo)
 
 Часть 2. Архитектура (Текстовый ответ)
 
